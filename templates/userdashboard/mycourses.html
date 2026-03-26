@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Courses</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mycourses.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <h1 class="page-title">My Courses</h1>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="card">
+                <h2>8</h2>
+                <p>Courses Enrolled</p>
+            </div>
+
+            <div class="card">
+                <h2>2</h2>
+                <p>Completed Courses</p>
+            </div>
+
+            <div class="card">
+                <h2>3</h2>
+                <p>Ongoing Courses</p>
+            </div>
+        </div>
+
+        <!-- COURSE LIST -->
+       <div class="course-list" id="courseList">
+
+<!-- Courses will load here dynamically -->
+
+</div>
+
+    </div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+
+<script src="mycourses.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

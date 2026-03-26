@@ -19,6 +19,26 @@ function togglePassword(inputId) {
   }
 }
 
+// ==============================
+// GLOBAL LOGOUT HANDLER
+// ==============================
+
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("logout-btn")) {
+
+        // Remove only auth related data
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("user");
+
+        // Clear session storage (optional)
+        sessionStorage.clear();
+
+        // Redirect to login page
+        window.location.href = "/templates/login.html"; 
+        // Change path if needed
+    }
+});
+
 // Show Toast Notification
 function showToast(message, type = "success") {
   // Remove existing toast if any

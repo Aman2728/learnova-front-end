@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attendance Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="attendance.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+<div>
+<h1>Attendance</h1>
+<p>Home / Attendance</p>
+</div>
+</div>
+
+
+<!-- TEACHER ATTENDANCE -->
+<div class="attendance-card">
+
+<h2 style="margin-bottom:10px;">Teacher Attendance</h2>
+
+<table class="attendance-table">
+
+<thead>
+<tr>
+<th>Teacher ID</th>
+<th>Teacher Name</th>
+<th>Date</th>
+<th>Time</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="attendanceTable"></tbody>
+
+</table>
+
+</div>
+
+
+
+<!-- STUDENT ATTENDANCE -->
+<div class="attendance-card" style="margin-top:30px;">
+
+<h2 style="margin-bottom:10px;">Student Attendance</h2>
+
+<table class="attendance-table">
+
+<thead>
+<tr>
+<th>Student ID</th>
+<th>Student Name</th>
+<th>Date</th>
+<th>Time</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="studentAttendanceTable"></tbody>
+
+</table>
+
+</div>
+
+
+</div> <!-- main-content -->
+
+</div> <!-- admin-wrapper -->
+
+
+<script src="attendance.js"></script>
+
+<script>
+fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+
+<script src="../../script.js"></script>
+
+</body>
+</html>

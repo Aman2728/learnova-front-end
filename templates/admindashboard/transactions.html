@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students List</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="transactions.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content transactions-page">
+
+      <h1 class="page-title">Transactions & Payments</h1>
+
+      <!-- SUMMARY CARDS -->
+      <div class="summary-cards">
+        <div class="card total">
+          <p>Total Transactions</p>
+          <h2>1,248</h2>
+        </div>
+        <div class="card">
+          <p>Successful</p>
+          <h2>1,050</h2>
+        </div>
+        <div class="card">
+          <p>Pending</p>
+          <h2>128</h2>
+        </div>
+        <div class="card">
+          <p>Failed</p>
+          <h2>70</h2>
+        </div>
+      </div>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Paid</button>
+        <button class="filter-btn">Pending</button>
+        <button class="filter-btn">Failed</button>
+      </div>
+
+      <!-- TRANSACTIONS TABLE -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Txn ID</th>
+              <th>User</th>
+              <th>Course</th>
+              <th>Amount</th>
+              <th>Method</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Invoice</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTableBody">
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+  <script src="transactions.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

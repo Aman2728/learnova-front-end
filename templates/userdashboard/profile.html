@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<h1 class="page-title">My Profile</h1>
+
+<!-- PROFILE SUMMARY -->
+<div class="profile-summary">
+
+<div class="profile-card">
+
+<div class="profile-pic">
+<img id="profileImage" src="https://via.placeholder.com/120" alt="Profile">
+<input type="file" id="imageUpload" hidden>
+<label for="imageUpload" class="upload-btn">Change Photo</label>
+</div>
+
+<h3 id="studentName">Student Name</h3>
+<p>Class 10A | Roll No: 21</p>
+<p>Status: Active Student</p>
+
+</div>
+
+</div>
+
+<!-- DETAILS SECTION -->
+<div class="details-container">
+
+<div class="details-card">
+<h3>Personal Information</h3>
+
+<div class="info-grid">
+<div><strong>Full Name:</strong> <span id="studentFullName"></span></div>
+<div><strong>Date of Birth:</strong> 12 May 2010</div>
+<div><strong>Email:</strong> <span id="studentEmail"></span></div>
+<div><strong>Phone:</strong> <span id="studentPhone"></span></div>
+<div><strong>City:</strong> <span id="studentCity"></span></div>
+<div><strong>Gender:</strong> Male</div>
+</div>
+
+</div>
+
+<div class="details-card">
+<h3>Academic Information</h3>
+
+<div class="info-grid">
+<div><strong>Class:</strong> <span id="studentClass"></span></div>
+<div><strong>Section:</strong> Science</div>
+<div><strong>Roll No:</strong> <span id="studentRoll"></span></div>
+<div><strong>Admission Date:</strong> 2022</div>
+<div><strong>Average Grade:</strong> 82%</div>
+<div><strong>Attendance:</strong> 92%</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+
+<script src="profile.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

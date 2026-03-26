@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f0fdfa;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#134e4a;
+    color:white;
+    position:fixed;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:white;
+    display:block;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover{
+    background:#0f766e;
+}
+
+/* Main */
+.main{
+    margin-left:240px;
+    width:100%;
+}
+
+/* Header */
+.header{
+    background:white;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.header h2{
+    color:#0f766e;
+}
+
+/* Analytics */
+.analytics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    color:#0f766e;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Check Section */
+.check-section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.buttons{
+    margin-top:15px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    margin-right:10px;
+}
+
+.checkin{
+    background:#0f766e;
+    color:white;
+}
+
+.checkout{
+    background:#ef4444;
+    color:white;
+}
+
+/* Calendar */
+.calendar-section{
+    margin:20px;
+}
+
+.calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.day{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.present{
+    background:#d1fae5;
+}
+
+.absent{
+    background:#fee2e2;
+}
+
+.holiday{
+    background:#fde68a;
+}
+
+
+/* Center container */
+.assignment-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Grid layout */
+#assignmentList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 20px;
+    width: 80%;
+}
+
+/* Card styling */
+.assignment-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.assignment-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Title */
+.assignment-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Text */
+.assignment-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Links */
+.assignment-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.assignment-card a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+
+
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <div class="page-header">
+      <div>
+        <h1>All Courses</h1>
+        <p>Home / Courses</p>
+      </div>
+      <button class="btn-primary" onclick="openCourseModal()">+ Add Course</button>
+    </div>
+
+    <div class="course-grid" id="courseGrid"></div>
+
+  </div>
+</div>
+
+<script src="courses.js"></script>
+<script>
+fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+
+
+
+
+<!-- ADD COURSE MODAL -->
+<div id="addCourseModal" class="modal">
+
+  <div class="modal-content">
+
+    <h2>Create Course</h2>
+
+    <input type="text" id="courseTitle" placeholder="Course Title">
+
+    <textarea id="courseDescription" placeholder="Course Description"></textarea>
+
+    <input type="number" id="coursePrice" placeholder="Course Price">
+
+    <input type="number" id="courseDuration" placeholder="Course Duration (Days)">
+
+    <input type="number" id="courseSlots" placeholder="Total Student Slots">
+
+    <div class="modal-actions">
+      <button onclick="createCourse()">Create</button>
+      <button onclick="closeAddCourseModal()">Cancel</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- EDIT COURSE MODAL -->
+<!-- EDIT COURSE MODAL -->
+<div id="editCourseModal" class="modal">
+
+  <div class="modal-content">
+    <h3>Edit Course</h3>
+
+    <input type="hidden" id="editCourseId">
+
+    <input type="number" id="editPrice" placeholder="Price">
+
+    <input type="number" id="editSlots" placeholder="Total Slots">
+
+    <select id="editStatus">
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <div class="modal-actions">
+      <button class="btn-primary" onclick="updateCourse()">Update</button>
+      <button onclick="closeEditModal()">Cancel</button>
+      <button onclick="assignTeacher()">Assign</button>
+<button onclick="closeAssignModal()">Cancel</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ASSIGN TEACHER MODAL -->
+
+<div id="assignTeacherModal" class="modal">
+
+  <div class="modal-content">
+
+    <h3>Assign Teacher</h3>
+
+    <input type="hidden" id="assignCourseId">
+
+    <select id="teacherDropdown">
+      <option value="">Select Teacher</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="assignTeacherToCourse()">Assign</button>
+    <button onclick="closeAssignModal()">Cancel</button>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+
+
+
+<div id="assignTeacherModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Assign Teacher</h3>
+
+<input type="hidden" id="courseId">
+
+<select id="teacherDropdown">
+<option value="">Select Teacher</option>
+</select>
+
+
+
+</div>
+
+</div>
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

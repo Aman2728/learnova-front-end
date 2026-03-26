@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students List</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="students.css">
+</head>
+<body>
+<!-- EDIT STUDENT MODAL -->
+<div id="editModal" class="modal" style="display:none">
+  <div class="modal-box">
+    <h3>Edit Student</h3>
+
+    <label>Username</label>
+    <input id="editUsername" type="text">
+
+    <label>Mobile Number</label>
+    <input id="editMobile" type="text">
+
+    <label>New Password (optional)</label>
+    <input id="editPassword" type="password">
+
+    <div class="modal-actions">
+      <button onclick="updateStudent()" class="btn-primary">Update</button>
+      <button onclick="closeEditModal()" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+<!-- ADD STUDENT MODAL -->
+<div id="addModal" class="modal" style="display:none">
+  <div class="modal-box">
+    <h3>Add Student</h3>
+
+    <label>Username</label>
+    <input id="addUsername" type="text">
+
+    <label>Email</label>
+    <input id="addEmail" type="email">
+
+    <label>Mobile Number</label>
+    <input id="addMobile" type="text">
+
+    <label>Password</label>
+    <input id="addPassword" type="password">
+
+    <label>Role</label>
+    <input id="role" type="text">
+
+    <div class="modal-actions">
+      <button onclick="addStudent()" class="btn-primary">Create</button>
+      <button onclick="closeAddModal()" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div>
+        <h1>Students List</h1>
+        <p>Home / Students</p>
+      </div>
+
+      <button class="btn-primary" onclick="openAddModal()">+ Add Student</button>
+
+    </div>
+
+    <!-- SEARCH + FILTER -->
+    <div class="table-controls">
+      <input type="text" id="searchInput" placeholder="Search by name or roll">
+      <select>
+        <option>Last 30 days</option>
+        <option>Last 6 months</option>
+        <option>Last year</option>
+      </select>
+    </div>
+
+    <!-- STUDENT TABLE -->
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>Student Name</th>
+            <th>Roll</th>
+            <th>Address</th>
+            <th>Class</th>
+            <th>DOB</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="studentTable">
+          <!-- JS will inject rows -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<script src="students.js"></script>
+
+
+<script>
+  function openAddModal() {
+  document.getElementById("addModal").style.display = "block";
+}
+
+function closeAddModal() {
+  document.getElementById("addModal").style.display = "none";
+}
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+
+</body>
+</html>

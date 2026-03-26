@@ -1123,6 +1123,15 @@ button, a.btn-primary, a.btn-ghost, a.btn-outline, a.btn-light, a.btn-outline-li
     font-weight: 500;
     font-size: 0.875rem;
 }
+.form-error {
+  color: #b00020;
+  background: #fdecea;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
 
 /* SUCCESS STORIES SECTION */
 .success-stories {
@@ -1464,6 +1473,11 @@ button, a.btn-primary, a.btn-ghost, a.btn-outline, a.btn-light, a.btn-outline-li
         grid-template-columns: 1fr;
     }
 }
+
+.admin-wrapper {
+  display: flex;
+}
+
 
 /* UTILITY */
 .text-center {

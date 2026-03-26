@@ -32,6 +32,10 @@
       </div>
     </div>
 
+
+
+
+
     <!-- Right Panel -->
     <div class="form-panel">
       <div class="form-container">
@@ -51,7 +55,7 @@
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
-              <input type="text" placeholder="Enter your full name" required>
+              <input type="text" id="regUsername" placeholder="Enter your full name" required>
             </div>
           </div>
 
@@ -63,9 +67,17 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <input type="email" placeholder="Enter your email" required>
+              <input type="email" id="regEmail" placeholder="Enter your email" required>
             </div>
           </div>
+          <!---mobile-->
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <div class="input-wrapper">
+            <input type="text" id="regMobile" placeholder="Enter mobile number" required>
+          </div>
+          </div>
+
 
           <!-- Password -->
           <div class="form-group">
@@ -77,6 +89,7 @@
               </svg>
               <input 
                 type="password" 
+                id="regPassword"
                 placeholder="Create a strong password" 
                 minlength="8"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -86,16 +99,19 @@
           </div>
 
           <!-- Role -->
+          <!-- Role -->
           <div class="form-group">
             <label>Select Role</label>
-            <select required>
+            <div class="input-wrapper">
+             <select id="regRole" required>
               <option value="">Select Role</option>
               <option value="student">Student</option>
               <option value="teacher">Teacher</option>
               <option value="admin">Admin</option>
               <option value="parents">Parents</option>
-            </select>
-          </div>
+             </select>
+            </div>
+           </div>
 
           <button type="submit" class="btn-primary">
             Create Account
@@ -110,6 +126,51 @@
       </div>
     </div>
   </div>
+  <script>
+  document
+  .getElementById("registerForm")
+  .addEventListener("submit", registerSubmit);
+
+  function registerSubmit(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("regUsername").value;
+  const email = document.getElementById("regEmail").value;
+  const password = document.getElementById("regPassword").value;
+  const mobile = document.getElementById("regMobile").value;
+  const role = document.getElementById("regRole").value;
+
+  fetch("http://127.0.0.1:8000/users/create-user/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      username,
+      email,
+      password,
+      mobile,
+      role
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+
+    if (data.success) {
+      alert("Registration successful 🎉");
+      window.location.href = "login.html";
+    } else {
+      alert(data.message || "Registration failed");
+    }
+  })
+  .catch(err => {
+    console.error("Register Error:", err);
+    alert("Something went wrong");
+  });
+}
+</script>
+
 
   <script src="../script.js"></script>
 </body>

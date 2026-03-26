@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teachers</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="teachers.css">
+</head>
+<body>
+
+<!-- EDIT TEACHER MODAL -->
+<div id="editTeacherModal" class="modal" style="display:none">
+  <div class="modal-box">
+    <h3>Edit Teacher</h3>
+
+    <label>Username</label>
+    <input id="editTeacherUsername" type="text">
+
+    <label>Mobile Number</label>
+    <input id="editTeacherMobile" type="text">
+
+    <label>New Password (optional)</label>
+    <input id="editTeacherPassword" type="password">
+
+    <div class="modal-actions">
+      <button onclick="updateTeacher()" class="btn-primary">Update</button>
+      <button onclick="closeEditTeacherModal()" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD TEACHER MODAL -->
+<div id="addTeacherModal" class="modal" style="display:none">
+  <div class="modal-box">
+    <h3>Add Teacher</h3>
+
+    <label>Username</label>
+    <input id="addTeacherUsername" type="text">
+
+    <label>Email</label>
+    <input id="addTeacherEmail" type="email">
+
+    <label>Mobile Number</label>
+    <input id="addTeacherMobile" type="text">
+
+    <label>Password</label>
+    <input id="addTeacherPassword" type="password">
+
+    <div class="modal-actions">
+      <button onclick="addTeacher()" class="btn-primary">Create</button>
+      <button onclick="closeAddTeacherModal()" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <div class="page-header">
+      <div>
+        <h1>Teachers</h1>
+        <p>Home / Teachers</p>
+      </div>
+
+      <!-- BUTTON UPDATED -->
+      <button class="btn-primary" onclick="openAddTeacherModal()">+ Add Teacher</button>
+    </div>
+
+    <div class="teacher-grid" id="teacherGrid"></div>
+
+    
+  </div>
+</div>
+
+
+
+<script src="teachers.js"></script>
+<script>
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+
+</body>
+</html>

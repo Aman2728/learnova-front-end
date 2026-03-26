@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notifications</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="notifications.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<h1 class="page-title">Task Notifications</h1>
+
+<div class="notification-box">
+
+<!-- Notification -->
+<div class="notification-card">
+<div class="icon">📘</div>
+<div class="content">
+<h3>Web Development Assignment Uploaded</h3>
+<p>Prof. Rahul Sharma assigned "Responsive Portfolio Website".</p>
+<span class="time">Due: 15 Feb • 2 hrs ago</span>
+</div>
+<button class="view-btn">View Task</button>
+</div>
+
+<div class="notification-card">
+<div class="icon">📊</div>
+<div class="content">
+<h3>Data Science Project Assigned</h3>
+<p>Dr. Meena Kapoor assigned "Sales Prediction Model".</p>
+<span class="time">Due: 20 Feb • Today</span>
+</div>
+<button class="view-btn">View Task</button>
+</div>
+
+<div class="notification-card">
+<div class="icon">💻</div>
+<div class="content">
+<h3>Python Coding Practice</h3>
+<p>Prof. Arvind Kumar uploaded weekly coding exercises.</p>
+<span class="time">Due: 12 Feb • Yesterday</span>
+</div>
+<button class="view-btn">View Task</button>
+</div>
+
+<div class="notification-card">
+<div class="icon">🎨</div>
+<div class="content">
+<h3>UI/UX Case Study Task</h3>
+<p>Ms. Sneha Verma assigned "Mobile App UX Analysis".</p>
+<span class="time">Due: 18 Feb • 1 day ago</span>
+</div>
+<button class="view-btn">View Task</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+
+<script src="notifications.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

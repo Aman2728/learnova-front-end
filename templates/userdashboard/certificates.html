@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Certificates</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="certificates.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<div class="top-bar">
+<h1>My Certificates</h1>
+
+<label class="upload-btn">
+Add Certificate
+<input type="file" id="fileUpload" hidden>
+</label>
+</div>
+
+<div class="certificate-grid">
+
+<div class="cert-card">
+<img src="https://www.w3schools.com/mysql/img_cert_mysql.jpg">
+<h3>Web Development Certificate</h3>
+<p>Issued for: Full Stack Web Development</p>
+<button>Download</button>
+</div>
+
+<div class="cert-card">
+<img src="https://cdn.shopaccino.com/igmguru/attribute-values/mysql-certificate-6044029489208582_l.jpg?v=546">
+<h3>Data Science Certificate</h3>
+<p>Issued for: Python Data Analysis</p>
+<button>Download</button>
+</div>
+
+<div class="cert-card">
+<img src="https://hitmindia.com/storage/2025/11/1712726170813.jpg">
+<h3>UI/UX Design Certificate</h3>
+<p>Issued for: UI Design Mastery</p>
+<button>Download</button>
+</div>
+
+<div class="cert-card">
+<img src="https://hitmindia.com/storage/2025/11/1712726170813.jpg">
+<h3>Digital Marketing Certificate</h3>
+<p>Issued for: SEO & Marketing</p>
+<button>Download</button>
+</div>
+
+<div class="cert-card">
+<img src="https://hitmindia.com/storage/2025/11/1712726170813.jpg">
+<h3>Machine Learning Certificate</h3>
+<p>Issued for: ML Foundations</p>
+<button>Download</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+
+<script src="certificates.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

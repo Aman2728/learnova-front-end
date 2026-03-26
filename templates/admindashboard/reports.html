@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Reports</title>
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <h1 class="page-title">Reports & Analytics</h1>
+
+    <!-- KPI CARDS -->
+    <div class="stats">
+      <div class="card highlight">
+        <h4>Total Courses</h4>
+        <h2>134</h2>
+        <p>+2 this month</p>
+      </div>
+
+      <div class="card">
+        <h4>Active Students</h4>
+        <h2>1,245</h2>
+        <p>+48 new</p>
+      </div>
+
+      <div class="card">
+        <h4>Instructors</h4>
+        <h2>56</h2>
+        <p>42 active</p>
+      </div>
+
+      <div class="card">
+        <h4>Monthly Revenue</h4>
+        <h2>₹1,35,200</h2>
+        <p>+12%</p>
+      </div>
+    </div>
+
+    <!-- GRID SECTION -->
+    <div class="grid">
+
+      <!-- USER ACTIVITY -->
+      <div class="box">
+        <h3>Active Instructors</h3>
+        <ul class="list">
+          <li>Dr. Alice Meens <span class="online"></span></li>
+          <li>Dr. Christopher Smith <span class="online"></span></li>
+          <li>Mrs. Monica Black <span class="online"></span></li>
+          <li>Dr. Daniel Kha <span class="online"></span></li>
+          <li>Dr. Marcus McSaline <span class="offline"></span></li>
+        </ul>
+      </div>
+
+      <!-- COURSE PROGRESS -->
+      <div class="box">
+        <h3>Weekly Course Activity</h3>
+        <p class="muted">Avg learning time: 12.3 hrs</p>
+        <div class="bars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- ENROLLMENT SUMMARY -->
+      <div class="box">
+        <h3>Enrollment Summary</h3>
+        <table>
+          <tr><th>Course</th><th>Enrolled</th></tr>
+          <tr><td>Web Development</td><td>320</td></tr>
+          <tr><td>Data Science</td><td>280</td></tr>
+          <tr><td>Digital Marketing</td><td>210</td></tr>
+          <tr><td>UI/UX Design</td><td>165</td></tr>
+        </table>
+      </div>
+
+      <!-- TODAY COURSES -->
+      <div class="box highlight">
+        <h3>Today’s Classes</h3>
+        <ul>
+          <li>Statistics – Class 10A</li>
+          <li>English – Class 9B</li>
+          <li>Physics – Class 11C</li>
+          <li>Mathematics – Class 12A</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- MONTHLY REPORT -->
+    <h2 class="section-title">January Performance Report</h2>
+
+    <div class="stats">
+      <div class="card">
+        <h4>Website Visits</h4>
+        <h2>198</h2>
+        <p>+2.6%</p>
+      </div>
+
+      <div class="card">
+        <h4>Returning Users</h4>
+        <h2>46</h2>
+        <p>+1.4%</p>
+      </div>
+
+      <div class="card">
+        <h4>Course Completions</h4>
+        <h2>92</h2>
+        <p>+8%</p>
+      </div>
+
+      <div class="card">
+        <h4>Assessments Passed</h4>
+        <h2>78%</h2>
+        <p>Success Rate</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="reports.js"></script>
+<script>
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+</body>
+</html>

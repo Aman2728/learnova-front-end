@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Invoices</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="invoices.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <h1 class="page-title">Invoices & Billing</h1>
+
+    <!-- SUMMARY CARDS -->
+    <div class="stats">
+        <div class="card highlight">
+            <h4>Total Invoices</h4>
+            <h2>860</h2>
+            <p>+25 this month</p>
+        </div>
+
+        <div class="card">
+            <h4>Paid</h4>
+            <h2>720</h2>
+            <p>83%</p>
+        </div>
+
+        <div class="card">
+            <h4>Pending</h4>
+            <h2>110</h2>
+            <p>Awaiting payment</p>
+        </div>
+
+        <div class="card">
+            <h4>Overdue</h4>
+            <h2>30</h2>
+            <p>Needs action</p>
+        </div>
+    </div>
+
+    <!-- INVOICE TABLE -->
+    <div class="box">
+        <h3>All Invoices</h3>
+
+        <table class="invoice-table">
+            <tr>
+                <th>Invoice ID</th>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>#INV1021</td>
+                <td>Aman Pathak</td>
+                <td>Web Development</td>
+                <td>₹4,999</td>
+                <td class="paid">Paid</td>
+                <td>10 Feb 2026</td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>#INV1022</td>
+                <td>Riya Sharma</td>
+                <td>Data Science</td>
+                <td>₹6,499</td>
+                <td class="pending">Pending</td>
+                <td>12 Feb 2026</td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>#INV1023</td>
+                <td>Rahul Verma</td>
+                <td>UI/UX Design</td>
+                <td>₹3,999</td>
+                <td class="overdue">Overdue</td>
+                <td>13 Feb 2026</td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+        </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="invoices.js"></script>
+
+<script>
+fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+</body>
+</html>

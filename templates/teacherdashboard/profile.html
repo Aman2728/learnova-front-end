@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<!-- SIDEBAR (UNCHANGED STRUCTURE) -->
+<div class="sidebar">
+    <div class="logo">Teacher Panel</div>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">My Courses</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li class="active"><a href="teacher-profile.html">Profile</a></li>
+        <button class="logout-btn">Logout</button>
+
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h2>Teacher Profile</h2>
+       <div class="profile-name" id="profileHeaderName">Teacher</div>
+    </div>
+
+    <div class="profile-container">
+
+        <!-- LEFT PROFILE CARD -->
+        <div class="profile-card">
+
+            <div class="profile-pic-section">
+                <img id="profileImage" src="https://www.cvexpres.com/teaching-jobs-schools/wp-content/uploads/2023/08/job_teacher_classroom_teacher.jpg" alt="Profile">
+                <input type="file" id="imageUpload" accept="image/*">
+                <label for="imageUpload" class="upload-btn">Change Photo</label>
+            </div>
+
+           <h3 id="profileName">Teacher Name</h3>
+            <p>Mathematics Teacher</p>
+            <p>Employee ID: TCH1021</p>
+            <p>Status: Active</p>
+
+            <div class="experience-box">
+                <h4>Experience</h4>
+                <p>8 Years Teaching Experience</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT DETAILS SECTION -->
+        <div class="details-section">
+
+            <!-- PERSONAL INFO -->
+            <div class="details-card">
+                <h3>Personal Information</h3>
+                <div class="info-grid">
+                  <div><strong>Full Name:</strong> <span id="profileFullName"></span></div>
+                    <div><strong>Date of Birth:</strong> 15 March 1988</div>
+                   <div><strong>Email:</strong> <span id="profileEmail"></span></div>
+                    <div><strong>Phone:</strong> +91 9876543210</div>
+                    <div><strong>Address:</strong> Delhi, India</div>
+                    <div><strong>Gender:</strong> Female</div>
+                </div>
+            </div>
+
+            <!-- PROFESSIONAL INFO -->
+            <div class="details-card">
+                <h3>Professional Information</h3>
+                <div class="info-grid">
+                    <div><strong>Department:</strong> Science & Mathematics</div>
+                    <div><strong>Subjects:</strong> Algebra, Geometry</div>
+                    <div><strong>Classes Assigned:</strong> 9A, 10A</div>
+                    <div><strong>Joining Date:</strong> 2018</div>
+                    <div><strong>Employment Type:</strong> Full-Time</div>
+                    <div><strong>Work Location:</strong> Main Campus</div>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="details-card">
+                <h3>Education Background</h3>
+                <div class="info-grid">
+                    <div><strong>PhD:</strong> Mathematics - Delhi University</div>
+                    <div><strong>M.Sc:</strong> Applied Mathematics - 2012</div>
+                    <div><strong>B.Sc:</strong> Mathematics - 2010</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="profile.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

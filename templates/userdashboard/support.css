@@ -1,0 +1,42 @@
+.support-banner{
+background:linear-gradient(90deg,#009688,#00bfa5);
+color:white;
+padding:18px;
+border-radius:10px;
+text-align:center;
+margin-bottom:25px;
+}
+
+.support-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.support-item{
+display:flex;
+align-items:center;
+background:white;
+padding:18px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.num{
+background:#009688;
+color:white;
+font-size:22px;
+font-weight:bold;
+padding:12px 18px;
+border-radius:10px;
+margin-right:20px;
+}
+
+.content h3{
+margin:0;
+}
+
+.content p{
+margin-top:5px;
+color:#555;
+}

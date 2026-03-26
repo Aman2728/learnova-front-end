@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages - Teacher Panel</title>
+    <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+
+<!-- SIDEBAR (UNCHANGED) -->
+<div class="sidebar">
+    <div class="logo">Teacher Panel</div>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">My Courses</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li class="active"><a href="messages.html">Messages</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <button class="logout-btn">Logout</button>
+
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h2>Subject Wise Messages</h2>
+         <span id="teacherName">Welcome</span>
+    </div>
+
+    <div class="chat-container">
+
+        <!-- SUBJECT LIST -->
+        <div class="subject-list">
+            <h3>Subjects</h3>
+            <ul>
+                <li onclick="openChat('math')" class="active-subject">Mathematics</li>
+                <li onclick="openChat('science')">Science</li>
+                <li onclick="openChat('english')">English</li>
+                <li onclick="openChat('history')">History</li>
+            </ul>
+        </div>
+
+        <!-- CHAT AREA -->
+        <div class="chat-area">
+
+            <div class="chat-header">
+                <h3 id="chatTitle">Mathematics - Mr. Verma</h3>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message teacher">
+                    Please complete exercise 5 before tomorrow.
+                </div>
+
+                <div class="message student">
+                    Okay sir, I will complete it.
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="messages.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

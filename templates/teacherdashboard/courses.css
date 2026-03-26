@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f0fdfa;
+}
+
+/* Sidebar (NO CHANGE IN OPTIONS) */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#134e4a;
+    color:white;
+    position:fixed;
+}
+
+.logo{
+    padding:20px;
+    text-align:center;
+    background:#0f766e;
+    font-weight:bold;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:white;
+    display:block;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover{
+    background:#0f766e;
+}
+
+/* Main */
+.main{
+    margin-left:240px;
+    width:100%;
+}
+
+/* Header */
+.header{
+    background:white;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.header h2{
+    color:#0f766e;
+}
+
+/* Analytics Cards */
+.analytics-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    text-align:center;
+}
+
+.card h3{
+    color:#0f766e;
+}
+
+.card p{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* Courses */
+.courses-container{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.course-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.course-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.badge{
+    background:#0f766e;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.badge.completed{
+    background:#14b8a6;
+}
+
+.course-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    margin-top:15px;
+    gap:10px;
+}
+
+.progress{
+    background:#ccfbf1;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+.progress-bar{
+    background:#0f766e;
+    padding:8px;
+    color:white;
+    text-align:center;
+    font-size:14px;
+}
+
+.course-footer{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    font-size:14px;
+    color:#0f766e;
+}

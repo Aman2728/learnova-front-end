@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Attendance</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="attendance.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<h2 class="title">Student Attendance Overview</h2>
+<p class="welcome">Welcome <span id="liveClock"></span></p>
+
+
+<!-- ANALYTICS -->
+<div class="analytics">
+
+<div class="card">
+<h3>Total Working Days</h3>
+<p>22</p>
+</div>
+
+<div class="card">
+<h3>Present Days</h3>
+<p id="presentDays">0</p>
+</div>
+
+<div class="card">
+<h3>Leaves Taken</h3>
+<p>3</p>
+</div>
+
+<div class="card">
+<h3>Govt Holidays</h3>
+<p>2</p>
+</div>
+
+</div>
+
+
+
+<!-- TODAY ATTENDANCE -->
+<div class="attendance-box">
+
+<h3>Today's Attendance</h3>
+
+<div class="buttons">
+
+<button class="checkin" onclick="markAttendance('present')" id="presentBtn">
+Check In
+</button>
+
+<button class="absent" onclick="markAttendance('absent')" id="absentBtn">
+Mark Absent
+</button>
+
+</div>
+
+<p id="statusMessage"></p>
+
+</div>
+
+
+
+<!-- CALENDAR -->
+<div class="calendar-section">
+
+<h3>February 2026</h3>
+
+<div id="calendar" class="calendar"></div>
+
+</div>
+
+
+</div>
+</div>
+
+
+<script src="attendance.js"></script>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d)
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d)
+</script>
+
+<script src="../../script.js"></script>
+
+</body>
+</html>

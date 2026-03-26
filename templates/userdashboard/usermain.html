@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="userdashboard.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<h1 class="page-title" id="welcomeText">Hello</h1>
+
+<div class="dashboard-grid">
+
+<!-- LEFT -->
+<div class="left">
+
+<div class="card chart">
+<h3>Monthly Learning Activity</h3>
+<div class="bars">
+<div style="height:40%"></div>
+<div style="height:60%"></div>
+<div style="height:30%"></div>
+<div style="height:80%"></div>
+<div style="height:50%"></div>
+<div style="height:70%"></div>
+</div>
+</div>
+
+<div class="task-grid">
+
+<div class="card">
+<h3>Daily Tasks</h3>
+<ul>
+<li>Complete HTML Module</li>
+<li>Submit Data Science Quiz</li>
+<li>Watch AI Lecture</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Weekly Goals</h3>
+<ul>
+<li>Finish UI/UX Project</li>
+<li>Attend Live Webinar</li>
+<li>Complete Assignment</li>
+</ul>
+</div>
+
+</div>
+
+<div class="stats">
+<div class="mini">Courses Completed <b>12</b></div>
+<div class="mini">Learning Hours <b>78h</b></div>
+<div class="mini">Assignments Done <b>36</b></div>
+<div class="mini">Certificates <b>8</b></div>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="right">
+
+<div class="card progress">
+<h3>Course Progress</h3>
+
+<p>Web Development</p>
+<div class="bar"><span style="width:75%"></span></div>
+
+<p>Data Science</p>
+<div class="bar"><span style="width:49%"></span></div>
+
+<p>UI/UX Design</p>
+<div class="bar"><span style="width:31%"></span></div>
+
+</div>
+
+<div class="card circle">
+<h3>Yearly Progress</h3>
+<div class="circle-box">
+<span>63%</span>
+</div>
+<p class="muted">Overall Learning Completion</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+<script src="../../script.js"></script>
+</body>
+</html>

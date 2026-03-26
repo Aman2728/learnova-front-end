@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.admin-header {
+  height: 60px;
+  background: #1f2937;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.admin-user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+:root {
+  --primary: #059669;
+  --primary-dark: #047857;
+  --primary-light: #10b981;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --muted-foreground: #94a3b8;
+  --border: #e2e8f0;
+  --input-bg: #f8fafc;
+  --card: #ffffff;
+  --error: #ef4444;
+  --success: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background: #111827;
+  color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* Logo */
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Section Title */
+.section-title {
+  color: #94a3b8;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+
+/* Sidebar Menu */
+.admin-sidebar ul {
+  list-style: none;
+}
+
+.admin-sidebar ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #d1d5db;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 4px 12px;
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar ul li a:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+.admin-sidebar ul li a.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* Upgrade Card */
+.sidebar-upgrade {
+  background: var(--primary-light);
+  margin: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sidebar-upgrade p {
+  margin-bottom: 10px;
+}
+
+.upgrade-btn {
+  background: white;
+  color: var(--primary-dark);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.upgrade-btn:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+/* Scrollable if needed */
+.admin-sidebar {
+  overflow-y: auto;
+}
+
+
+/* MAIN CONTENT */
+.main-content {
+  padding: 20px;
+  flex: 1;
+}
+
+/* LAYOUT */
+.admin-wrapper {
+  display: flex;
+}

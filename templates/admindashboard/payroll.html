@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payroll / Course Fees</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="payroll.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div>
+        <h1>Course Fees & Payroll</h1>
+        <p>Home / Payroll</p>
+      </div>
+    </div>
+
+    <!-- KPI SUMMARY -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <h4>Total Course Fee</h4>
+        <h2 id="totalFee">₹0</h2>
+      </div>
+      <div class="kpi-card success">
+        <h4>Collected Amount</h4>
+        <h2 id="collectedFee">₹0</h2>
+      </div>
+      <div class="kpi-card danger">
+        <h4>Pending Amount</h4>
+        <h2 id="pendingFee">₹0</h2>
+      </div>
+    </div>
+
+    <!-- FEES TABLE -->
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Subjects</th>
+            <th>Students</th>
+            <th>Paid</th>
+            <th>Pending</th>
+            <th>Total Fee</th>
+            <th>Collected</th>
+            <th>Pending Amt</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="feeTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="payroll.js"></script>
+<script>
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+<script src="../../script.js"></script>
+
+</body>
+</html>

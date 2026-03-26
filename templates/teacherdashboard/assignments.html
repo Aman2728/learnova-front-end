@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignments - Teacher Panel</title>
+    <link rel="stylesheet" href="assignments.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">Teacher Panel</div>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">My Courses</a></li>
+        <li class="active"><a href="assignments.html">Assignments</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <button class="logout-btn">Logout</button>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <div class="header">
+        <h2>Assignments - Analytics Overview</h2>
+        <div class="profile">John Smith</div>
+    </div>
+
+    <!-- CREATE BUTTON -->
+    <div style="margin-bottom:20px;">
+        <button class="create-btn" onclick="openAssignmentModal()">
+            + Create Assignment
+        </button>
+    </div>
+
+    <!-- ASSIGNMENT LIST -->
+    <div class="assignment-container">
+        <div id="assignmentList"></div>
+    </div>
+
+</div>
+
+
+<!-- ================= CREATE ASSIGNMENT MODAL ================= -->
+<div id="assignmentModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Create Assignment</h2>
+
+        <input type="text" id="title" placeholder="Assignment Title">
+
+        <textarea id="description" placeholder="Assignment Description"></textarea>
+
+        <input type="text" id="language" placeholder="Language (C, C++, Python)">
+
+        <input type="date" id="dueDate">
+
+        <select id="course">
+            <option value="">Select Course</option>
+        </select>
+
+        <!-- FILE -->
+        <label>Upload File (optional)</label>
+        <input type="file" id="file">
+
+        <!-- LINK -->
+        <input type="text" id="link" placeholder="Paste resource link (optional)">
+
+        <div class="modal-buttons">
+            <button onclick="createAssignment()">Create</button>
+            <button onclick="closeAssignmentModal()">Cancel</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SUBMISSION MODAL ================= -->
+<div id="submissionModal" class="modal" style="display:none;">
+
+    <div class="modal-content">
+
+        <h2>Student Submissions</h2>
+
+        <div id="submissionList"></div>
+
+        <button onclick="closeSubmissionModal()">Close</button>
+
+    </div>
+
+</div>
+
+
+<!-- JS -->
+<script src="assignments.js"></script>
+<script src="../../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f7fc;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    transition:0.3s;
+}
+
+.logo{
+    padding:20px;
+    text-align:center;
+    background:#0f172a;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+    cursor:pointer;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active{
+    background:#334155;
+}
+
+/* Main */
+.main{
+    margin-left:240px;
+    width:100%;
+}
+
+/* Header */
+.header{
+    background:white;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+#toggleBtn{
+    font-size:20px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card p{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* Section */
+.section{
+    padding:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    background:white;
+}
+
+table th, table td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.completed{ color:green; font-weight:bold; }
+.ongoing{ color:orange; font-weight:bold; }
+.upcoming{ color:blue; font-weight:bold; }
+
+/* Analytics */
+.analytics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.progress{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.progress-bar{
+    background:#3b82f6;
+    color:white;
+    padding:5px;
+    text-align:center;
+}
+
+.small-table{
+    margin-top:10px;
+}
+
+
+
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar ul li:hover{
+    background: #0f766e;
+}
+
+.sidebar ul li.active{
+    background: #0f766e;
+}

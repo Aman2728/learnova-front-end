@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment Analytics</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="payments.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+<div id="sidebar"></div>
+
+<div class="main-content">
+
+<h1 class="page-title">Payment Dashboard</h1>
+
+<!-- SUMMARY -->
+<div class="summary">
+
+<div class="card">
+<h2>₹42,500</h2>
+<p>Total Paid Amount</p>
+</div>
+
+<div class="card">
+<h2>3</h2>
+<p>Paid Courses</p>
+</div>
+
+<div class="card">
+<h2>2</h2>
+<p>Pending Payments</p>
+</div>
+
+<div class="card">
+<h2>1</h2>
+<p>Partial Payments</p>
+</div>
+
+</div>
+
+<!-- ANALYTICS -->
+<div class="analytics-section">
+
+<div class="analytics-card">
+<h3>Monthly Payment Progress</h3>
+
+<div class="bar-row">
+<label>January</label>
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+
+<div class="bar-row">
+<label>February</label>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="bar-row">
+<label>March</label>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
+
+</div>
+
+<div class="analytics-card">
+<h3>Payment Completion Rate</h3>
+<div class="circle-progress">
+<span>78%</span>
+</div>
+<p>Most payments successfully completed</p>
+</div>
+
+</div>
+
+<!-- COURSE PAYMENT TABLE -->
+<div class="table-section">
+
+<h3>Course Payment Details</h3>
+
+<table class="payment-table">
+<tr>
+<th>Course</th>
+<th>Fee</th>
+<th>Status</th>
+<th>Paid</th>
+</tr>
+
+<tr>
+<td>Web Development</td>
+<td>₹15,000</td>
+<td class="paid">Paid</td>
+<td>₹15,000</td>
+</tr>
+
+<tr>
+<td>Data Science</td>
+<td>₹18,000</td>
+<td class="partial">Partial</td>
+<td>₹10,000</td>
+</tr>
+
+<tr>
+<td>UI/UX Design</td>
+<td>₹12,000</td>
+<td class="pending">Pending</td>
+<td>₹0</td>
+</tr>
+
+<tr>
+<td>Python Programming</td>
+<td>₹9,500</td>
+<td class="paid">Paid</td>
+<td>₹9,500</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</div>
+
+<script>
+fetch("header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("sidebar.html").then(r=>r.text()).then(d=>sidebar.innerHTML=d);
+</script>
+
+<script src="payments.js"></script>
+<script src="../../script.js"></script>
+
+</body>
+</html>

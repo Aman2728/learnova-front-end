@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grades - Teacher Panel</title>
+    <link rel="stylesheet" href="grades.css">
+</head>
+<body>
+
+<!-- SIDEBAR (UNCHANGED) -->
+<div class="sidebar">
+    <div class="logo">Teacher Panel</div>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="courses.html">My Courses</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="attendance.html">Attendance</a></li>
+        <li class="active"><a href="grades.html">Grades</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <button class="logout-btn">Logout</button>
+
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <h2>Student Grade System</h2>
+        <span id="teacherName">Welcome</span>
+    </div>
+
+    <!-- ANALYTICS -->
+    <div class="analytics">
+        <div class="card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Class Average</h3>
+            <p>76%</p>
+        </div>
+
+        <div class="card">
+            <h3>Highest Score</h3>
+            <p>95%</p>
+        </div>
+
+        <div class="card">
+            <h3>Pass Rate</h3>
+            <p>88%</p>
+        </div>
+    </div>
+
+    <!-- GRADE TABLE -->
+    <div class="grade-section">
+        <h3>Grade Report</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Assignments</th>
+                    <th>Mid Term</th>
+                    <th>Final Exam</th>
+                    <th>Total %</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>abhi</td>
+                    <td>2</td>
+                    <td>75</td>
+                    <td>90</td>
+                    <td>82%</td>
+                    <td>A</td>
+                    <td><span class="status good">Pass</span></td>
+                </tr>
+
+                <tr>
+                    <td>20</td>
+                    <td>raman</td>
+                    <td>3</td>
+                    <td>68</td>
+                    <td>74</td>
+                    <td>71%</td>
+                    <td>B</td>
+                    <td><span class="status avg">Pass</span></td>
+                </tr>
+
+                <tr>
+                    <td>25</td>
+                    <td>rohit</td>
+                    <td>3</td>
+                    <td>45</td>
+                    <td>55</td>
+                    <td>50%</td>
+                    <td>C</td>
+                    <td><span class="status low">Needs Improvement</span></td>
+                </tr>
+
+                <tr>
+                    <td>33</td>
+                    <td>lala</td>
+                    <td>3</td>
+                    <td>92</td>
+                    <td>95</td>
+                    <td>92%</td>
+                    <td>A+</td>
+                    <td><span class="status good">Pass</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="grades.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

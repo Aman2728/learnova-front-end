@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="admin-wrapper">
+  <div id="sidebar"></div>
+
+  <div class="main-content">
+
+    <h1>Dashboard Overview</h1>
+
+    <!-- KPI CARDS -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <h4>Total Students</h4>
+        <h2>1,245</h2>
+        <span class="kpi-positive">+12%</span>
+      </div>
+
+      <div class="kpi-card">
+        <h4>Total Teachers</h4>
+        <h2>56</h2>
+        <span class="kpi-positive">+5%</span>
+      </div>
+
+      <div class="kpi-card">
+        <h4>Total Courses</h4>
+        <h2>120</h2>
+        <span class="kpi-neutral">Stable</span>
+      </div>
+
+      <div class="kpi-card">
+        <h4>Total Revenue</h4>
+        <h2>$12,340</h2>
+        <span class="kpi-positive">+18%</span>
+      </div>
+    </div>
+
+    <!-- CHART SECTION -->
+    <div class="chart-grid">
+
+      <div class="chart-card">
+        <h3>Gender Distribution</h3>
+        <canvas id="genderChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Monthly Sales</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+    <div class="activity-grid">
+
+      <div class="activity-card">
+        <h3>Teacher Activity</h3>
+        <ul>
+          <li>👨‍🏫 Rahul added “Advanced Physics”</li>
+          <li>👩‍🏫 Neha updated “Math Basics”</li>
+          <li>👨‍🏫 Aman published a new quiz</li>
+        </ul>
+      </div>
+
+      <div class="activity-card">
+        <h3>Student Activity</h3>
+        <ul>
+          <li>🎓 Riya enrolled in “React Basics”</li>
+          <li>🎓 Karan completed “Python Intro”</li>
+          <li>🎓 Anjali paid subscription</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+<script src="../../script.js"></script>
+<script>
+  fetch("header.html").then(r => r.text()).then(d => header.innerHTML = d);
+  fetch("sidebar.html").then(r => r.text()).then(d => sidebar.innerHTML = d);
+</script>
+
+</body>
+</html>
