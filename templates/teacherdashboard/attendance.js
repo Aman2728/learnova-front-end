@@ -124,52 +124,99 @@ function renderCalendar(attendance){
 
 const calendar = document.getElementById("calendar")
 
+if(!calendar){
+console.log("Calendar not found")
+return
+}
+
 calendar.innerHTML = ""
 
-const daysInMonth = 28   // February example
+const now = new Date()
+const year = now.getFullYear()
+const month = now.getMonth()
 
-for(let i=1;i<=daysInMonth;i++){
+const totalDays = new Date(year, month + 1, 0).getDate()
 
-let dayBox = document.createElement("div")
-dayBox.classList.add("day")
+/* ✅ Month Name */
+const monthNames=[
+"January","February","March","April","May","June",
+"July","August","September","October","November","December"
+]
 
-dayBox.innerHTML = i
+document.getElementById("monthTitle").innerText =
+monthNames[month] + " " + year
 
-calendar.appendChild(dayBox)
+
+for(let day=1; day<=totalDays; day++){
+
+let div = document.createElement("div")
+div.classList.add("day")
+div.innerText = day
+
+/* ✅ MATCH DATE */
+const record = attendance.find(a=>{
+const d = new Date(a.date)
+return (
+d.getDate() === day &&
+d.getMonth() === month &&
+d.getFullYear() === year
+)
+})
+
+if(record){
+
+if(record.status === "present"){
+div.classList.add("present")
+}
+
+if(record.status === "absent"){
+div.classList.add("absent")
+}
 
 }
 
+/* ✅ Highlight Today */
+const today = new Date()
+if(day === today.getDate() && month === today.getMonth()){
+div.style.border = "2px solid #0f766e"
+}
+
+calendar.appendChild(div)
+
+}
+
+}
 /* COLOR ATTENDANCE */
 
-attendance.forEach(a=>{
+// attendance.forEach(a=>{
 
-const date = new Date(a.date)
+// const date = new Date(a.date)
 
-const day = date.getDate()
+// const day = date.getDate()
 
-const boxes = document.querySelectorAll(".day")
+// const boxes = document.querySelectorAll(".day")
 
-boxes.forEach(box=>{
+// boxes.forEach(box=>{
 
-if(parseInt(box.innerText) === day){
+// if(parseInt(box.innerText) === day){
 
-if(a.status === "present"){
-box.style.background = "#2ecc71"
-box.style.color="white"
-}
+// if(a.status === "present"){
+// box.style.background = "#2ecc71"
+// box.style.color="white"
+// }
 
-if(a.status === "absent"){
-box.style.background = "#e74c3c"
-box.style.color="white"
-}
+// if(a.status === "absent"){
+// box.style.background = "#e74c3c"
+// box.style.color="white"
+// }
 
-}
+// }
 
-})
+// })
 
-})
+// })
 
-}
+
 
 
 

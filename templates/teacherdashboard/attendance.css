@@ -197,3 +197,29 @@ button{
 .assignment-card a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+.day{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+/* ✅ PRESENT = GREEN */
+.present{
+    background:#22c55e !important;
+    color:white;
+}
+
+/* ✅ ABSENT = RED */
+.absent{
+    background:#ef4444 !important;
+    color:white;
+}
