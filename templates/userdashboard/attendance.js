@@ -44,31 +44,94 @@ loadAttendance()
 
 /* RENDER CALENDAR */
 
+// function renderCalendar(){
+
+// const calendar=document.getElementById("calendar")
+
+// calendar.innerHTML=""
+
+// const now=new Date()
+
+// const year=now.getFullYear()
+
+// const month=now.getMonth()
+
+// const totalDays=new Date(year,month+1,0).getDate()
+
+// for(let day=1;day<=totalDays;day++){
+
+// const div=document.createElement("div")
+
+// div.classList.add("day")
+
+// div.innerText=day
+
+
+// const record=attendanceData.find(a=>{
+// return new Date(a.date).getDate()===day
+// })
+
+// if(record){
+
+// if(record.status==="present"){
+// div.classList.add("present")
+// }
+// if(record.status==="absent"){
+// div.classList.add("absent")
+// }
+
+// }
+
+// calendar.appendChild(div)
+
+// }
+
+// }
+
+
+/* RENDER CALENDAR */
+
 function renderCalendar(){
 
 const calendar=document.getElementById("calendar")
+
+if(!calendar){
+console.log("Calendar not found")
+return
+}
 
 calendar.innerHTML=""
 
 const now=new Date()
 
 const year=now.getFullYear()
-
 const month=now.getMonth()
 
 const totalDays=new Date(year,month+1,0).getDate()
 
+/* ✅ SET MONTH NAME HERE */
+const monthNames=[
+"January","February","March","April","May","June",
+"July","August","September","October","November","December"
+]
+
+document.getElementById("monthTitle").innerText =
+monthNames[month] + " " + year
+
+
 for(let day=1;day<=totalDays;day++){
 
 const div=document.createElement("div")
-
 div.classList.add("day")
-
 div.innerText=day
 
-
 const record=attendanceData.find(a=>{
-return new Date(a.date).getDate()===day
+const d=new Date(a.date)
+return (
+d.getDate()===day &&
+d.getMonth()===month &&
+d.getFullYear()===year
+)
 })
 
 if(record){
@@ -76,10 +139,17 @@ if(record){
 if(record.status==="present"){
 div.classList.add("present")
 }
+
 if(record.status==="absent"){
 div.classList.add("absent")
 }
 
+}
+
+// highlight today
+const today=new Date()
+if(day===today.getDate() && month===today.getMonth()){
+div.style.border="2px solid #0f766e"
 }
 
 calendar.appendChild(div)
@@ -87,8 +157,6 @@ calendar.appendChild(div)
 }
 
 }
-
-
 
 /* SUMMARY */
 
